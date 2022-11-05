@@ -13,6 +13,12 @@ public class Header {
     //locator for search box
     @FindBy(xpath = "//input[@id='search_query_top']")
     WebElement cboSearchBox;
+    //locator for Search Suggestions
+    @FindBy(xpath = "//div[@class='ac_results']")
+    WebElement cboSearchSuggestion;
+    //locator for search button
+    @FindBy(xpath = "//button[@name='submit_search']")
+    WebElement btnSearchBox;
     //locator for cart
     @FindBy(xpath = "//div[@class='shopping_cart']/a[@title='View my shopping cart']")
     WebElement lnkCartOption;
@@ -31,8 +37,11 @@ public class Header {
     }
 
     //input search string in search box
-    public boolean inputSearchString(String searchString){
-        return commons.sendKeys(cboSearchBox,searchString);
+    public boolean inputSearchString(String searchString, int seconds) throws InterruptedException {
+        commons.sendKeys(cboSearchBox,searchString);
+        commons.explicitlyWaitUntilElementToBeClickable(driver,seconds,cboSearchSuggestion);
+        commons.click(btnSearchBox);
+        return true;
     }
 
     //check cart is displayed and enabled

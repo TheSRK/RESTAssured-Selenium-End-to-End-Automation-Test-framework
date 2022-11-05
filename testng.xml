@@ -5,6 +5,7 @@
     <test thread-count="2" parallel="tests" verbose="10" name="Deals tests" enabled="true" >
         <classes>
             <class name="UI_Automation.Tests.HomePageTests"/>
+            <class name="UI_Automation.Tests.HeaderTests"/>
         </classes>
     </test>
 

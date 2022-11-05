@@ -9,4 +9,10 @@ public interface Constants {
     String BROWSER_MODE = prop.getProperty("browserMode");
     String BROWSER_SIZE = prop.getProperty("browserSize");
     int IMPLICIT_WAIT = Integer.parseInt(prop.getProperty("implicitWait"));
+    int EXPLICIT_WAIT = Integer.parseInt(prop.getProperty("explicitWait"));
+
+    /**
+     * header section
+     */
+    String SEARCH_STRING = prop.getProperty("searchString");
 }
