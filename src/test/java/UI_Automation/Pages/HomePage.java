@@ -10,14 +10,12 @@ public class HomePage {
     WebDriver driver;
     Commons commons = new Commons();
 
+    //locator for Popular category
     @FindBy(xpath = "//a[contains(text(),'Popular')]")
     WebElement lnkPopularCategory;
-    @FindBy(xpath = "//input[@id='search_query_top']")
-    WebElement cboSearchBox;
-    @FindBy(xpath = "//div[@class='shopping_cart']/a[@title='View my shopping cart']")
-    WebElement lnkCartOption;
+    //locator for menu Women
     @FindBy(xpath = "//a[@title='Women']")
-    WebElement lnkWomenCategory;
+    WebElement mnuWomenCategory;
 
     public HomePage(WebDriver driver){
         this.driver = driver;
