@@ -129,4 +129,11 @@ public class Commons {
         }
         return flag;
     }
+
+    /**
+     * Is checkbox checked
+     */
+    public boolean isSelected(WebElement element){
+        return element.isSelected();
+    }
 }
