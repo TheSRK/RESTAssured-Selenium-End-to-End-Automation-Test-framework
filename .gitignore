@@ -1,0 +1,7 @@
+gradle/
+.gradle/
+.idea/
+build/
+allure-report/
+allure-results/
+test-output/emailable-report.html
