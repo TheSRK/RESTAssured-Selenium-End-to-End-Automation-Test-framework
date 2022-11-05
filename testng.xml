@@ -2,10 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" >
 
-    <test thread-count="2" parallel="tests" verbose="10" name="Deals tests" enabled="true" >
+    <test thread-count="2" parallel="tests" verbose="10" name="Scenario 1: Users are able to search for an item using the search bar" enabled="true" >
         <classes>
             <class name="UI_Automation.Tests.HomePageTests"/>
             <class name="UI_Automation.Tests.HeaderTests"/>
+            <class name="UI_Automation.Tests.SearchResultPageTests"/>
         </classes>
     </test>
 

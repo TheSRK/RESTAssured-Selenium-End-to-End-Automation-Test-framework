@@ -22,10 +22,16 @@ public class HomePage {
         PageFactory.initElements(driver,this);
     }
 
+    //check if page loaded
+    public boolean isFullPageLoaded(){
+        return commons.isPageLoadComplete(driver);
+    }
+
+    //get title of the page
     public String getPageTitle(){
         return commons.getTitle(driver);
     }
-
+    //get Popular link text
     public String getLinkTextPopular(){
         return commons.getText(lnkPopularCategory);
     }
