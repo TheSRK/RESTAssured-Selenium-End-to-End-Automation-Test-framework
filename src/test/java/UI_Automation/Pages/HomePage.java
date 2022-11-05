@@ -23,10 +23,10 @@ public class HomePage {
     }
 
     public String getPageTitle(){
-        return commons.getCurrentPageTitle(driver);
+        return commons.getTitle(driver);
     }
 
     public String getLinkTextPopular(){
-        return commons.getElementText(lnkPopularCategory);
+        return commons.getText(lnkPopularCategory);
     }
 }

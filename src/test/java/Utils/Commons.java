@@ -1,5 +1,6 @@
 package Utils;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -18,7 +19,7 @@ public class Commons {
      * @param element
      * @return
      */
-    public String getElementText(WebElement element){
+    public String getText(WebElement element){
         return element.getText();
     }
 
@@ -27,7 +28,46 @@ public class Commons {
      * @param driver
      * @return
      */
-    public String getCurrentPageTitle(WebDriver driver){
+    public String getTitle(WebDriver driver){
         return driver.getTitle();
+    }
+
+    /**
+     * This method inserts user inputs
+     * @param element
+     * @param inputString
+     * @return
+     */
+    public boolean sendKeys(WebElement element, String inputString){
+        element.sendKeys(inputString);
+        return true;
+    }
+
+    /**
+     * This method hits Enter button on element from keyboard
+     * @param element
+     * @return
+     */
+    public boolean sendKeysEnter(WebElement element){
+        element.sendKeys(Keys.ENTER);
+        return true;
+    }
+
+    /**
+     * this method checks if element is displayed
+     * @param element
+     * @return
+     */
+    public boolean isDisplayed(WebElement element){
+        return element.isDisplayed();
+    }
+
+    /**
+     * this method checks if element is enabled
+     * @param element
+     * @return
+     */
+    public boolean isEnabled(WebElement element){
+        return element.isEnabled();
     }
 }
