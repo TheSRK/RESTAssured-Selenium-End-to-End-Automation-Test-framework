@@ -21,7 +21,7 @@ public class Header {
     WebElement btnSearchBox;
     //locator for cart
     @FindBy(xpath = "//div[@class='shopping_cart']/a[@title='View my shopping cart']")
-    WebElement lnkCartOption;
+    public WebElement lnkCartOption;
 
 
     public Header(WebDriver driver){

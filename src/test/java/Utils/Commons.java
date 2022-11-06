@@ -1,6 +1,7 @@
 package Utils;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -144,5 +145,14 @@ public class Commons {
      */
     public boolean isSelected(WebElement element){
         return element.isSelected();
+    }
+
+    /**
+     * hover over element
+     */
+    public boolean hover(WebDriver driver, WebElement element){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element);
+        return true;
     }
 }
