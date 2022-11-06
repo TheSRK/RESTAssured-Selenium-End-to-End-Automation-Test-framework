@@ -62,6 +62,7 @@ public class WomenPage {
 
     //click category
     public boolean clickCategories(int seconds) {
+        commons.Scroll(driver,chkCategoryDresses);
         commons.click(chkCategoryDresses);
         commons.explicitlyWaitUntilElementToBeVisible(driver,seconds,txaEnabledFilteredCategoriesSection);
         return true;
@@ -122,6 +123,7 @@ public class WomenPage {
     //check color box on displayed product
     public boolean isSelectedColorDisplayed(int seconds) {
         commons.explicitlyWaitUntilElementToBeClickable(driver, seconds, lnkColorBox);
+        commons.Scroll(driver,lnkColorBox);
         return commons.isDisplayed(lnkColorBox);
 
     }

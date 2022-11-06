@@ -38,6 +38,7 @@ public class Header {
 
     //input search string in search box
     public boolean inputSearchString(String searchString, int seconds) throws InterruptedException {
+        commons.Scroll(driver,cboSearchBox);
         commons.sendKeys(cboSearchBox,searchString);
         commons.explicitlyWaitUntilElementToBeClickable(driver,seconds,btnSearchBox);
         commons.click(btnSearchBox);
