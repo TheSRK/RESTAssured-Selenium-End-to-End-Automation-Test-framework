@@ -1,9 +1,6 @@
 package Utils;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -87,6 +84,18 @@ public class Commons {
     public void explicitlyWaitUntilElementToBeClickable(WebDriver driver, int seconds, WebElement element){
         new WebDriverWait(driver, Duration.ofSeconds(seconds))
                 .until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    /**
+     * Explicitly wait :- Element To Be visible
+     * @param driver
+     * @param seconds
+     * @param element
+     */
+
+    public void explicitlyWaitUntilElementToBeVisible(WebDriver driver, int seconds, By element){
+        new WebDriverWait(driver, Duration.ofSeconds(seconds))
+                .until(ExpectedConditions.presenceOfElementLocated(element));
     }
 
     /**

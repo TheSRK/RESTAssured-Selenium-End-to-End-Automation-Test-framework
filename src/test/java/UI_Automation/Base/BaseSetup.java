@@ -13,15 +13,12 @@ public class BaseSetup {
     protected static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
     private static WebDriver driver;
 
+    //initialize web driver
     @BeforeTest
     public void Setup(){
-
-        if(Objects.isNull(driver)){
-
             driver = BrowserManager.setBrowser(Constants.BROWSER_NAME);
             threadLocalDriver.set(driver);
             getDriver().get("http://automationpractice.com/index.php");
-        }
     }
 
     //Get threadLocal driver
@@ -33,8 +30,7 @@ public class BaseSetup {
         threadLocalDriver.set(driverRef);
     }
 
-
-
+    //close browser and clean thread local driver
     @AfterTest
     public void tearDown(){
         getDriver().quit();

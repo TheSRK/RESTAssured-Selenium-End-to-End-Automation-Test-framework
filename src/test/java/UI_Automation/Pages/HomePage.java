@@ -16,6 +16,9 @@ public class HomePage {
     //locator for menu Women
     @FindBy(xpath = "//a[@title='Women']")
     WebElement mnuWomenCategory;
+    //locator for home featured products
+    @FindBy(id = "homefeatured")
+    WebElement dgdHomeFeatured;
 
     public HomePage(WebDriver driver){
         this.driver = driver;
@@ -33,6 +36,23 @@ public class HomePage {
     }
     //get Popular link text
     public String getLinkTextPopular(){
+        commons.Scroll(driver, lnkPopularCategory);
+        commons.isDisplayed(lnkPopularCategory);
         return commons.getText(lnkPopularCategory);
+    }
+
+    //click menu Women
+    public boolean clickWomen(){
+        commons.Scroll(driver,mnuWomenCategory);
+        commons.isDisplayed(lnkPopularCategory);
+        commons.click(mnuWomenCategory);
+        return true;
+    }
+
+    //check home featured products are visible
+    public boolean isHomeFeaturedProductVisible(){
+        commons.Scroll(driver,dgdHomeFeatured);
+        return commons.isDisplayed(dgdHomeFeatured);
+
     }
 }

@@ -11,18 +11,18 @@ import static org.testng.Assert.assertTrue;
 public class HeaderTests extends BaseSetup {
     Header header;
 
-    @Test (priority = 1)
+    @Test (priority = 5)
     public void testSearchBoxVisibility(){
         header = new Header(getDriver());
         assertTrue(header.isSearchBoxInteractable(),"search box not interactable");
     }
 
-    @Test (priority = 2)
+    @Test (priority = 6)
     public void testCartOptionVisibility(){
         assertTrue(header.isCartInteractable(), "cart not interactable");
     }
 
-    @Test (priority = 3)
+    @Test (priority = 7)
     public void testInsertUserInputInSearchBox() throws InterruptedException {
         assertTrue(header.inputSearchString(Constants.SEARCH_STRING,Constants.EXPLICIT_WAIT),"user input was not inserted");
     }
