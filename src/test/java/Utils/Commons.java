@@ -139,6 +139,23 @@ public class Commons {
         }
         return flag;
     }
+    /**
+     * check List<WebElement> elements is displayed
+     * @param elements
+     *
+     */
+    public boolean isListOfWebElementDisplayed(List<WebElement> elements) {
+        boolean flag = false;
+        for (WebElement element: elements) {
+            if (element.isDisplayed()) {
+                flag=true;
+            }
+            else {
+                flag=false;
+            }
+        }
+        return flag;
+    }
 
     /**
      * Is checkbox checked
