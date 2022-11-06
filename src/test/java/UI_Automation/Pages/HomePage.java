@@ -19,6 +19,9 @@ public class HomePage {
     //locator for home featured products
     @FindBy(id = "homefeatured")
     WebElement dgdHomeFeatured;
+    //locator for popular product
+    @FindBy(xpath = "//ul[@id='blockbestsellers']//a[@title='Faded Short Sleeve T-shirts'][@class='product_img_link']")
+    WebElement lnkPopularProduct;
 
     public HomePage(WebDriver driver){
         this.driver = driver;
@@ -54,5 +57,13 @@ public class HomePage {
         commons.Scroll(driver,dgdHomeFeatured);
         return commons.isDisplayed(dgdHomeFeatured);
 
+    }
+
+    //click popular product
+    public boolean clickPopularProduct(){
+        commons.Scroll(driver, lnkPopularCategory);
+        commons.click(lnkPopularCategory);
+        commons.jsClick(driver,lnkPopularProduct);
+        return true;
     }
 }

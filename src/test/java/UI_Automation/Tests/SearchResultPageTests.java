@@ -11,13 +11,13 @@ import static org.testng.Assert.assertTrue;
 public class SearchResultPageTests extends BaseSetup {
     SearchResultPage searchResultPage;
 
-    @Test(priority = 8)
+    @Test(priority =9)
     public void testFullPageLoad(){
         searchResultPage = new SearchResultPage(getDriver());
         searchResultPage.isFullPageLoaded();
 
     }
-    @Test(priority = 9)
+    @Test(priority = 10)
     public void testMatchProductNamesWithSearchString(){
         assertTrue(searchResultPage.isSearchStringVisibleOnProductNames(Constants.SEARCH_STRING));
     }

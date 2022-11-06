@@ -13,7 +13,7 @@ public class ProductDetailsPage extends Header {
     Commons commons = new Commons();
 
     //locator for navigation path
-    @FindBy(xpath = "//div[@class='breadcrumb clearfix']")
+    @FindBy(css = ".breadcrumb.clearfix")
     WebElement navPath;
     //locator for product name
     @FindBy(xpath = "//h1[contains(text(),'Faded Short Sleeve T-shirts')]")
@@ -22,7 +22,7 @@ public class ProductDetailsPage extends Header {
     @FindBy(id = "bigpic")
     WebElement imgProduct;
     //locator for whole product details area
-    @FindBy(className = "primary_block row")
+    @FindBy(css = ".primary_block.row")
     WebElement dgdProductArea;
     //locator for product pice
     @FindBy(id = "our_price_display")
@@ -90,7 +90,8 @@ public class ProductDetailsPage extends Header {
     }
 
     //check success icon is visible
-    public boolean isSuccessIconVisible(){
+    public boolean isSuccessIconVisible(int seconds){
+        commons.explicitlyWaitUntilElementToBeClickable(driver,seconds, imgSuccessIcon);
         return commons.isDisplayed(imgSuccessIcon);
     }
 

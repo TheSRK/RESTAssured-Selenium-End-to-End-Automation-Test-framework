@@ -122,6 +122,17 @@ public class Commons {
     }
 
     /**
+     * JavaScript Click
+     * @param driver
+     * @param element
+     */
+    public void jsClick(WebDriver driver, WebElement element){
+        ((JavascriptExecutor)driver)
+                .executeScript("arguments[0].click();", element);
+    }
+
+
+    /**
      * check text on List<WebElement> elements
      * @param elements
      * @param visibleText
@@ -169,7 +180,7 @@ public class Commons {
      */
     public boolean hover(WebDriver driver, WebElement element){
         Actions actions = new Actions(driver);
-        actions.moveToElement(element);
+        actions.moveToElement(element).build().perform();
         return true;
     }
 }

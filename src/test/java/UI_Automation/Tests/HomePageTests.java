@@ -41,5 +41,10 @@ public class HomePageTests extends BaseSetup {
         assertTrue(homePage.clickWomen(),"failed: women menu click ");
     }
 
+    @Test(priority = 5)
+    public void testClickPopularProduct(){
+        assertTrue(homePage.clickPopularProduct(), "failed to click popular product");
+    }
+
 
 }
