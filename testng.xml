@@ -2,39 +2,39 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
 
-        <test verbose="10" name="Scenario 1" enabled="true" >
-            <classes>
-                <class name="UI_Automation.Tests.HomePageTests">
-                    <methods>
-                        <exclude name="testClickMenuWomen"/>
-                        <exclude name="testClickPopularProduct"/>
-                    </methods>
-                </class>
-                <class name="UI_Automation.Tests.HeaderTests"/>
-                <class name="UI_Automation.Tests.SearchResultPageTests"/>
-            </classes>
-        </test>
+    <test verbose="10" name="Scenario 1" enabled="true" >
+        <classes>
+            <class name="UI_Automation.Tests.HomePageTests">
+                <methods>
+                    <exclude name="testClickMenuWomen"/>
+                    <exclude name="testClickPopularProduct"/>
+                </methods>
+            </class>
+            <class name="UI_Automation.Tests.HeaderTests"/>
+            <class name="UI_Automation.Tests.SearchResultPageTests"/>
+        </classes>
+    </test>
 
-        <test verbose="10" name="Scenario 2 " enabled="true" >
-            <classes>
-                <class name="UI_Automation.Tests.HomePageTests">
-                    <methods>
-                        <exclude name="testClickPopularProduct"/>
-                    </methods>
-                </class>
-                <class name="UI_Automation.Tests.WomenPageTests"/>
-            </classes>
-        </test>
+    <test verbose="10" name="Scenario 2 " enabled="true" >
+        <classes>
+            <class name="UI_Automation.Tests.HomePageTests">
+                <methods>
+                    <exclude name="testClickPopularProduct"/>
+                </methods>
+            </class>
+            <class name="UI_Automation.Tests.WomenPageTests"/>
+        </classes>
+    </test>
     <test verbose="10" name="Scenario 3 " enabled="true" >
-            <classes>
-                <class name="UI_Automation.Tests.HomePageTests">
-                    <methods>
-                        <exclude name="testClickMenuWomen"/>
-                    </methods>
-                </class>
-                <class name="UI_Automation.Tests.ProductDetailsPageTests"/>
-                <class name="UI_Automation.Tests.CartPageTests"/>
-            </classes>
-        </test>
+        <classes>
+            <class name="UI_Automation.Tests.HomePageTests">
+                <methods>
+                    <exclude name="testClickMenuWomen"/>
+                </methods>
+            </class>
+            <class name="UI_Automation.Tests.ProductDetailsPageTests"/>
+            <class name="UI_Automation.Tests.CartPageTests"/>
+        </classes>
+    </test>
 
 </suite>

@@ -5,3 +5,4 @@ build/
 allure-report/
 allure-results/
 test-output/emailable-report.html
+src/test/resources/screenshots/
