@@ -99,6 +99,15 @@ public class Commons {
                 .until(ExpectedConditions.presenceOfElementLocated(element));
     }
 
+    // wait for customize given seconds
+    public void waitToVisualize(int durationMS) {
+        try {
+            Thread.sleep(durationMS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      * JavaScriptExecutor wait for full page to load
      * @param driver
@@ -131,6 +140,16 @@ public class Commons {
                 .executeScript("arguments[0].click();", element);
     }
 
+    /**
+     * highlight any element
+     * @param driver
+     * @param element
+     */
+    public void highlighter(WebDriver driver, WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].setAttribute('style','border:2px solid red;background: beige');", element);
+    }
+
 
     /**
      * check text on List<WebElement> elements
@@ -155,7 +174,7 @@ public class Commons {
      * @param elements
      *
      */
-    public boolean isListOfWebElementDisplayed(List<WebElement> elements) {
+    public boolean isListOfWebElementDisplayed( List<WebElement> elements) {
         boolean flag = false;
         for (WebElement element: elements) {
             if (element.isDisplayed()) {

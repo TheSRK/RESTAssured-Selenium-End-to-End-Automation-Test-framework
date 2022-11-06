@@ -37,27 +37,34 @@ public class CartPage {
     }
 
     //check checkout button is clickable
-    public boolean isCheckoutBtnVisible(int seconds){
+    public boolean isCheckoutBtnVisible(int seconds, int wait){
         commons.explicitlyWaitUntilElementToBeClickable(driver, seconds, btnCheckout);
+        commons.Scroll(driver,btnCheckout);
+        commons.waitToVisualize(wait);
         commons.isDisplayed(btnCheckout);
         commons.isEnabled(btnCheckout);
         return true;
     }
 
     //check cart table visible
-    public boolean isCartHeaderVisible(){
+    public boolean isCartHeaderVisible(int wait){
+        commons.Scroll(driver,tblCartProducts);
+        commons.waitToVisualize(wait);
         return commons.isDisplayed(tblCartProducts);
     }
 
     //check product count from message
-    public int countProductFromMessage(){
+    public boolean countProductFromMessage(int wait){
+        commons.Scroll(driver, txaCartProductCount);
+        commons.waitToVisualize(wait);
         String productCountMessage= commons.getText(txaCartProductCount);
         availableCartProductCount = Integer.parseInt(productCountMessage.replaceAll("[^0-9]", ""));
-        return availableCartProductCount;
+        return availableCartProductCount>0;
     }
 
     //check list of product is visible in the table
-    public boolean isProductVisibleInsideTable(){
+    public boolean isProductVisibleInsideTable(int wait){
+        commons.waitToVisualize(wait);
         return commons.isListOfWebElementDisplayed(lstCartProductRow);
     }
 }

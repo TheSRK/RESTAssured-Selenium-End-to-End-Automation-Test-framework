@@ -10,6 +10,8 @@ public interface Constants {
     String BROWSER_SIZE = prop.getProperty("browserSize");
     int IMPLICIT_WAIT = Integer.parseInt(prop.getProperty("implicitWait"));
     int EXPLICIT_WAIT = Integer.parseInt(prop.getProperty("explicitWait"));
+    int WAIT = Integer.parseInt(prop.getProperty("wait"));
+
 
     /**
      * header section
