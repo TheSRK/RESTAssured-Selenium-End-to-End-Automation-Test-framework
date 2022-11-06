@@ -24,12 +24,12 @@ public class WomenPageTests extends BaseSetup {
 
     @Test(priority = 8)
     public void testClickCategories(){
-        assertTrue(womenPage.clickCategories(Constants.EXPLICIT_WAIT),"failed category click");
+        assertTrue(womenPage.clickCategories(Constants.EXPLICIT_WAIT,Constants.WAIT),"failed category click");
     }
 
     @Test(priority = 9)
     public void testClickColor(){
-        assertTrue(womenPage.isColorClicked(Constants.EXPLICIT_WAIT),"failed click color");
+        assertTrue(womenPage.isColorClicked(Constants.EXPLICIT_WAIT,Constants.WAIT),"failed click color");
     }
 
     @Test(priority = 10)
@@ -39,6 +39,6 @@ public class WomenPageTests extends BaseSetup {
 
     @Test(priority = 11)
     public void testIsSelectedColorBoxDisplayedOnProducts(){
-        assertTrue(womenPage.isSelectedColorDisplayed(Constants.EXPLICIT_WAIT),"failed: color box not found on products");
+        assertTrue(womenPage.isSelectedColorDisplayed(Constants.EXPLICIT_WAIT,Constants.WAIT),"failed: color box not found on products");
     }
 }

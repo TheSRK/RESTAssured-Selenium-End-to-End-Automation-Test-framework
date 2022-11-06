@@ -61,8 +61,9 @@ public class SearchResultPage {
     }
 
     //get matching searched text from search results
-    public boolean isSearchStringVisibleOnProductNames(String userInput){
+    public boolean isSearchStringVisibleOnProductNames(String userInput, int wait){
         commons.Scroll(driver,grdProducts);
+        commons.waitToVisualize(wait);
         commons.getListOfWebElementTextMatch(lstSearchedProductNames, userInput);
         return true;
     }

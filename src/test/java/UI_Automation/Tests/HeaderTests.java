@@ -14,7 +14,7 @@ public class HeaderTests extends BaseSetup {
     @Test (priority = 6)
     public void testSearchBoxVisibility(){
         header = new Header(getDriver());
-        assertTrue(header.isSearchBoxInteractable(),"search box not interactable");
+        assertTrue(header.isSearchBoxInteractable(Constants.WAIT),"search box not interactable");
     }
 
     @Test (priority = 7)
@@ -24,6 +24,6 @@ public class HeaderTests extends BaseSetup {
 
     @Test (priority = 8)
     public void testInsertUserInputInSearchBox() throws InterruptedException {
-        assertTrue(header.inputSearchString(Constants.SEARCH_STRING,Constants.EXPLICIT_WAIT),"user input was not inserted");
+        assertTrue(header.inputSearchString(Constants.SEARCH_STRING,Constants.EXPLICIT_WAIT,Constants.WAIT),"user input was not inserted");
     }
 }

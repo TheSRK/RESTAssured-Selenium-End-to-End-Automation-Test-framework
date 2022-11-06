@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" >
+<suite name="All Test Suite">
 
-        <test verbose="10" name="Scenario 1:r" enabled="false" >
+        <test verbose="10" name="Scenario 1" enabled="true" >
             <classes>
                 <class name="UI_Automation.Tests.HomePageTests">
                     <methods>
@@ -15,7 +15,7 @@
             </classes>
         </test>
 
-        <test verbose="10" name="Scenario 2 " enabled="false" >
+        <test verbose="10" name="Scenario 2 " enabled="true" >
             <classes>
                 <class name="UI_Automation.Tests.HomePageTests">
                     <methods>

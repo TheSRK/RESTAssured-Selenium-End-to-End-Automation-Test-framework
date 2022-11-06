@@ -61,18 +61,20 @@ public class WomenPage {
     }
 
     //click category
-    public boolean clickCategories(int seconds) {
+    public boolean clickCategories(int seconds, int wait) {
         commons.Scroll(driver,chkCategoryDresses);
         commons.click(chkCategoryDresses);
+        commons.waitToVisualize(wait);
         commons.explicitlyWaitUntilElementToBeVisible(driver,seconds,txaEnabledFilteredCategoriesSection);
         return true;
     }
 
     //click color pink
-    public boolean isColorClicked(int seconds) {
+    public boolean isColorClicked(int seconds, int wait) {
         commons.Scroll(driver, chkColorPink);
         commons.isEnabled(chkColorPink);
         commons.click(chkColorPink);
+        commons.waitToVisualize(wait);
         commons.explicitlyWaitUntilElementToBeVisible(driver,seconds,txaEnabledFilteredColorSection);
         return isColorClickedFlag = true;
     }
@@ -121,9 +123,10 @@ public class WomenPage {
     }
 
     //check color box on displayed product
-    public boolean isSelectedColorDisplayed(int seconds) {
+    public boolean isSelectedColorDisplayed(int seconds, int wait) {
         commons.explicitlyWaitUntilElementToBeClickable(driver, seconds, lnkColorBox);
         commons.Scroll(driver,lnkColorBox);
+        commons.waitToVisualize(wait);
         return commons.isDisplayed(lnkColorBox);
 
     }

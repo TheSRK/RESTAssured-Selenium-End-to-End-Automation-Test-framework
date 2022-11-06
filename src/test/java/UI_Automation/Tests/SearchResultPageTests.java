@@ -19,7 +19,7 @@ public class SearchResultPageTests extends BaseSetup {
     }
     @Test(priority = 10)
     public void testMatchProductNamesWithSearchString(){
-        assertTrue(searchResultPage.isSearchStringVisibleOnProductNames(Constants.SEARCH_STRING));
+        assertTrue(searchResultPage.isSearchStringVisibleOnProductNames(Constants.SEARCH_STRING,Constants.WAIT));
     }
 
 }

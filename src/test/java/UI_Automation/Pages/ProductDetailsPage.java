@@ -82,16 +82,18 @@ public class ProductDetailsPage extends Header {
     }
 
     //click add to cart
-    public boolean clickBtnAddToCart(int seconds){
+    public boolean clickBtnAddToCart(int seconds, int wait){
         commons.Scroll(driver, btnAddToCart);
+        commons.waitToVisualize(wait);
         commons.click(btnAddToCart);
         commons.explicitlyWaitUntilElementToBeVisible(driver, seconds, dgdPopUp);
         return true;
     }
 
     //check success icon is visible
-    public boolean isSuccessIconVisible(int seconds){
+    public boolean isSuccessIconVisible(int seconds, int wait){
         commons.explicitlyWaitUntilElementToBeClickable(driver,seconds, imgSuccessIcon);
+        commons.waitToVisualize(wait);
         return commons.isDisplayed(imgSuccessIcon);
     }
 
@@ -101,17 +103,19 @@ public class ProductDetailsPage extends Header {
     }
 
     //click cross button
-    public boolean clickBtnCross(){
+    public boolean clickBtnCross(int wait){
         commons.click(btnCloseWindowPopUp);
+        commons.waitToVisualize(wait);
         return true;
     }
 
     //hover over cart and click checkout
-    public boolean hoverOverCartAndClickCheckOut(int seconds){
+    public boolean hoverOverCartAndClickCheckOut(int seconds, int wait){
         commons.Scroll(driver, lnkCartOption);
         commons.hover(driver, lnkCartOption);
         commons.explicitlyWaitUntilElementToBeClickable(driver,seconds, btnCheckOut);
         commons.click(btnCheckOut);
+        commons.waitToVisualize(wait);
         return true;
     }
 

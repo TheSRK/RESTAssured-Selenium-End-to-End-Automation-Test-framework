@@ -45,25 +45,28 @@ public class HomePage {
     }
 
     //click menu Women
-    public boolean clickWomen(){
+    public boolean clickWomen(int wait){
         commons.Scroll(driver,mnuWomenCategory);
         commons.isDisplayed(lnkPopularCategory);
         commons.click(mnuWomenCategory);
+        commons.waitToVisualize(wait);
         return true;
     }
 
     //check home featured products are visible
-    public boolean isHomeFeaturedProductVisible(){
+    public boolean isHomeFeaturedProductVisible(int wait){
         commons.Scroll(driver,dgdHomeFeatured);
+        commons.waitToVisualize(wait);
         return commons.isDisplayed(dgdHomeFeatured);
 
     }
 
     //click popular product
-    public boolean clickPopularProduct(){
+    public boolean clickPopularProduct(int wait){
         commons.Scroll(driver, lnkPopularCategory);
         commons.click(lnkPopularCategory);
         commons.jsClick(driver,lnkPopularProduct);
+        commons.waitToVisualize(wait);
         return true;
     }
 }

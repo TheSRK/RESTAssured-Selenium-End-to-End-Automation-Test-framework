@@ -30,15 +30,17 @@ public class Header {
     }
 
     //check search box is interactable
-    public boolean isSearchBoxInteractable(){
+    public boolean isSearchBoxInteractable(int wait){
+        commons.waitToVisualize(wait);
         commons.isDisplayed(cboSearchBox);
         commons.isEnabled(cboSearchBox);
         return true;
     }
 
     //input search string in search box
-    public boolean inputSearchString(String searchString, int seconds) throws InterruptedException {
+    public boolean inputSearchString(String searchString, int seconds, int wait) throws InterruptedException {
         commons.Scroll(driver,cboSearchBox);
+        commons.waitToVisualize(wait);
         commons.sendKeys(cboSearchBox,searchString);
         commons.explicitlyWaitUntilElementToBeClickable(driver,seconds,btnSearchBox);
         commons.click(btnSearchBox);

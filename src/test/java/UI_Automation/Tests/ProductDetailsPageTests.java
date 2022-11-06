@@ -44,12 +44,12 @@ public class ProductDetailsPageTests extends BaseSetup {
 
     @Test(priority = 18)
     public void testClickBtnAddToCart(){
-        assertTrue(productDetailsPage.clickBtnAddToCart(Constants.EXPLICIT_WAIT),"failed to click add to cart btn");
+        assertTrue(productDetailsPage.clickBtnAddToCart(Constants.EXPLICIT_WAIT,Constants.WAIT),"failed to click add to cart btn");
     }
 
     @Test(priority = 19)
     public void testIsSuccessIconVisible(){
-        assertTrue(productDetailsPage.isSuccessIconVisible(Constants.EXPLICIT_WAIT),"failed: success icon could not be validated");
+        assertTrue(productDetailsPage.isSuccessIconVisible(Constants.EXPLICIT_WAIT,Constants.WAIT),"failed: success icon could not be validated");
     }
     @Test(priority = 20)
     public void testIsProductCountMessageVisible(){
@@ -57,10 +57,10 @@ public class ProductDetailsPageTests extends BaseSetup {
     }
     @Test(priority = 21)
     public void testClickBtnCross(){
-        assertTrue(productDetailsPage.clickBtnCross(), "failed to click cross btn");
+        assertTrue(productDetailsPage.clickBtnCross(Constants.WAIT), "failed to click cross btn");
     }
     @Test(priority = 22)
     public void testHoverOverCartAndClickCheckOut(){
-        assertTrue(productDetailsPage.hoverOverCartAndClickCheckOut(Constants.EXPLICIT_WAIT), "failed to hover over cart");
+        assertTrue(productDetailsPage.hoverOverCartAndClickCheckOut(Constants.EXPLICIT_WAIT,Constants.WAIT), "failed to hover over cart");
     }
 }

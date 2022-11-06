@@ -18,7 +18,7 @@ public class BaseSetup {
     public void Setup(){
             driver = BrowserManager.setBrowser(Constants.BROWSER_NAME);
             threadLocalDriver.set(driver);
-            getDriver().get("http://automationpractice.com/index.php");
+            getDriver().get(Constants.BASE_URL);
     }
 
     //Get threadLocal driver
@@ -33,7 +33,7 @@ public class BaseSetup {
     //close browser and clean thread local driver
     @AfterTest
     public void tearDown(){
-        getDriver().quit();
+        threadLocalDriver.get().quit();
         threadLocalDriver.remove();
     }
 
