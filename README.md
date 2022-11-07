@@ -42,6 +42,7 @@ Make sure you you import all the dependencies from 'build.gradle' file.
 
 [Utils](https://github.com/TheSRK/testautomation-using-selenium-restassured/tree/main/src/test/java/Utils) folder contains all the selenium methods, constants that have been used, properties file manager, Browser configuration, and suitelistner class to take screenshot after failed tests.
 
+[resources](https://github.com/TheSRK/testautomation-using-selenium-restassured/tree/main/src/test/resources) folder contains Task-3 Solution, Screenshots, JSONSchena, and Properties file
 
 
 ## ✔️Run tests
