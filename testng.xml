@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
 
-    <test verbose="10" name="Scenario 1" enabled="true" >
+    <test verbose="10" name="Scenario 1" enabled="false" >
         <classes>
             <class name="UI_Automation.Tests.HomePageTests">
                 <methods>
@@ -15,7 +15,7 @@
         </classes>
     </test>
 
-    <test verbose="10" name="Scenario 2 " enabled="true" >
+    <test verbose="10" name="Scenario 2 " enabled="false" >
         <classes>
             <class name="UI_Automation.Tests.HomePageTests">
                 <methods>
@@ -25,7 +25,8 @@
             <class name="UI_Automation.Tests.WomenPageTests"/>
         </classes>
     </test>
-    <test verbose="10" name="Scenario 3 " enabled="true" >
+
+    <test verbose="10" name="Scenario 3 " enabled="false" >
         <classes>
             <class name="UI_Automation.Tests.HomePageTests">
                 <methods>
@@ -36,5 +37,13 @@
             <class name="UI_Automation.Tests.CartPageTests"/>
         </classes>
     </test>
+
+    <test verbose="10" name="Task 2 " enabled="true" >
+        <classes>
+            <class name="API_Automation.API_Tests.CreateBookingTests"/>
+        </classes>
+    </test>
+
+
 
 </suite>
