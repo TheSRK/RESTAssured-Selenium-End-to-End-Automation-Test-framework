@@ -42,6 +42,11 @@ gradle clean test
 ```
 Genereate Allure Report
 
-`allure generate allure-results --clean -o allure-report`
+```bash
+allure generate allure-results --clean -o allure-report
+```
 
-`allure serve allure-results`
+```bash
+allure serve allure-results
+```
+
