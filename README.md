@@ -4,7 +4,7 @@ Task #1: [UI Tests](https://github.com/TheSRK/testautomation-using-selenium-rest
 
 Task #2: [API Tests](https://github.com/TheSRK/testautomation-using-selenium-restassured/tree/main/src/test/java/API_Automation)
 
-Task #3: [Database with SQL Query is given here](https://github.com/TheSRK/testautomation-using-selenium-restassured/tree/main/src/test/resources/Task_3)
+Task #3: [Database with SQL Query is given here](https://github.com/TheSRK/testautomation-using-selenium-restassured/tree/main/Task_3_DatabaseQuery)
 
 ## Installation (pre-requisites)
 
