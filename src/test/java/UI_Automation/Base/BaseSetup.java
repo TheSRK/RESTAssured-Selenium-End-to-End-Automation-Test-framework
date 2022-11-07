@@ -8,6 +8,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -17,10 +18,11 @@ public class BaseSetup {
     protected static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
     private static WebDriver driver;
 
-    //initialize web driver
+    //set  WebDriver to threadLocalDriver
+    @Parameters("browser")
     @BeforeTest
-    public void Setup(){
-            driver = BrowserManager.setBrowser(Constants.BROWSER_NAME);
+    public void Setup(String browser){
+            driver = BrowserManager.setBrowser(browser);
             threadLocalDriver.set(driver);
             getDriver().get(Constants.BASE_URL);
     }

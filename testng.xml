@@ -3,6 +3,7 @@
 <suite name="All Test Suite">
 
     <test verbose="10" name="Scenario 1" enabled="true" >
+        <parameter name="browser" value="chrome" />
         <classes>
             <class name="UI_Automation.Tests.HomePageTests">
                 <methods>
@@ -16,6 +17,7 @@
     </test>
 
     <test verbose="10" name="Scenario 2 " enabled="true" >
+        <parameter name="browser" value="chrome" />
         <classes>
             <class name="UI_Automation.Tests.HomePageTests">
                 <methods>
@@ -27,6 +29,7 @@
     </test>
 
     <test verbose="10" name="Scenario 3 " enabled="true" >
+        <parameter name="browser" value="chrome" />
         <classes>
             <class name="UI_Automation.Tests.HomePageTests">
                 <methods>
@@ -38,7 +41,7 @@
         </classes>
     </test>
 
-    <test verbose="10" name="Task 2 " enabled="true" >
+    <test verbose="10" name="Task 2: API Test " enabled="true" >
         <classes>
             <class name="API_Automation.API_Tests.CreateBookingTests"/>
         </classes>
