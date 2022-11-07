@@ -34,6 +34,17 @@ git clone https://github.com/TheSRK/testautomation-using-selenium-restassured.gi
 ```
 Make sure you you import all the dependencies from 'build.gradle' file.
 
+## Important Files
+
+[testng.xml](https://github.com/TheSRK/testautomation-using-selenium-restassured/blob/main/testng.xml) file contains all the tests (UI and API automation) in a suit level
+
+[Ui_Automation](https://github.com/TheSRK/testautomation-using-selenium-restassured/tree/main/src/test/java/UI_Automation) folder contains all the Configuration, Pages, and Tests for UI level automation.
+
+[API_Automation](https://github.com/TheSRK/testautomation-using-selenium-restassured/tree/main/src/test/java/API_Automation) folder contains all the specification regarding API automation. 
+
+[Utils](https://github.com/TheSRK/testautomation-using-selenium-restassured/tree/main/src/test/java/Utils) folder contains all the selenium methods, constants that have been used, properties file manager, Browser configuration, and suitelistner class to take screenshot after failed tests.
+
+
 
 ## ✔️Run tests
 Run the following command
