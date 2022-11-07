@@ -40,4 +40,8 @@ Run the following command
 ```bash
 gradle clean test
 ```
+Genereate Allure Report
 
+`allure generate allure-results --clean -o allure-report`
+
+`allure serve allure-results`
