@@ -1,0 +1,13 @@
+Soultion 1:
+
+SELECT * FROM `contacts` WHERE `email` != '' AND `phone` != '';
+
+Soultion 2:
+
+SELECT `groupId`, count( `id` ) AS count FROM `users` GROUP BY `groupId`;
+
+Soultion 3:
+
+SELECT `customerName`, `orderId`, `orderDate` FROM `customers` LEFT JOIN `orders` ON `customers`.`id` = `orders`.`customerId` ORDER BY `orders`.`orderDate` DESC;
+
+
