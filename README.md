@@ -1,12 +1,10 @@
 # 🥅 Goals
 
-[Task Descriptions](https://respond.notion.site/Technical-Assessment-QA-Automation-e119611e6ad64555bb7ff6993d7862c3#9c6cd00d9c514ad1b7226e438b0a7bf5)
+Task #1: [UI Tests](https://github.com/TheSRK/testautomation-using-selenium-restassured/tree/main/src/test/java/UI_Automation)
 
-Task #1: UI Tests
+Task #2: [API Tests](https://github.com/TheSRK/testautomation-using-selenium-restassured/tree/main/src/test/java/API_Automation)
 
-Task #2: API Tests
-
-Task #3: Database Querying
+Task #3: [Database with SQL Query is given here](https://github.com/TheSRK/testautomation-using-selenium-restassured/tree/main/src/test/resources/Task_3)
 
 ## Installation (pre-requisites)
 
