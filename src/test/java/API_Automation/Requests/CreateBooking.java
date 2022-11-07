@@ -6,12 +6,13 @@ import API_Automation.Data.BookingData;
 import API_Automation.Data.SerializeBookingData;
 import io.restassured.RestAssured;
 import io.restassured.module.jsv.JsonSchemaValidator;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.json.simple.JSONObject;
-
-import java.util.Map;
+import org.hamcrest.*;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 
 public class CreateBooking {
 
@@ -24,11 +25,10 @@ public class CreateBooking {
 
 
     public void postCreateBookingEndpoint(){
-        RestAssured.baseURI = APIConstants.BASE_URL;
+        //RestAssured.baseURI = APIConstants.BASE_URL;
         Response response =
-                given()
-                        .contentType("application/json")
-                        .accept("application/json")
+                SpecificationSetup
+                        .setRequestSpecification()
                         .body(getPayload())
                 .when()
                         .post(APIConstants.CREATE_BOOKING_ENDPOINT)
@@ -40,6 +40,12 @@ public class CreateBooking {
                         //response schema validation
                         .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("JSONSchema/createBookingResponse.json"))
                         .extract().response();
+
+        JsonPath jsonPath = response.jsonPath();
+        //retrieve bookingid from the response
+        int bookingid= jsonPath.get("bookingid");
+        //verify bookingid is valid
+        assertThat(bookingid,greaterThan(0));
 
 
     }

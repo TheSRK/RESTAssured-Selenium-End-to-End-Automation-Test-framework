@@ -10,8 +10,9 @@ public class SpecificationSetup {
 
     public static RequestSpecification setRequestSpecification(){
         return given()
-                .baseUri("https://restful-booker.herokuapp.com/booking")
-                .contentType("application/json");
+                .baseUri(APIConstants.BASE_URL)
+                .contentType("application/json")
+                .accept("application/json");
     }
 
     public static ResponseSpecification setResponseSpecification(){
