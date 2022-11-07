@@ -3,7 +3,9 @@
 [Task Descriptions](https://respond.notion.site/Technical-Assessment-QA-Automation-e119611e6ad64555bb7ff6993d7862c3#9c6cd00d9c514ad1b7226e438b0a7bf5)
 
 Task #1: UI Tests
+
 Task #2: API Tests
+
 Task #3: Database Querying
 
 ## Installation (pre-requisites)
