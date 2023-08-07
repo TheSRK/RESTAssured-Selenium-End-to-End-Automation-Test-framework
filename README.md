@@ -14,7 +14,7 @@ Java 11 as the programming language.
 
 Selenium WebDriver as the web browser automation framework using the Java binding.
 
-WebDriverManager as the browser driver management library.
+WebDriverManager as the browser's driver management library.
 
 TestNG as the testing framework.
 
